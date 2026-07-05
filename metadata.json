@@ -1,0 +1,6 @@
+{
+  "name": "Thời Trang & Mỹ Phẩm Ốc Nguyễn",
+  "description": "Cửa hàng thời trang và mỹ phẩm cao cấp Ốc Nguyễn với thanh toán trực tuyến, giỏ hàng thông minh, tư vấn chatbot AI 24/7 và hệ thống quản lý bán hàng chuyên nghiệp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
