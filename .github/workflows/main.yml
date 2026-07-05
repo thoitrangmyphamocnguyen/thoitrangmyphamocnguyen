@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - master
-
   workflow_dispatch:
 
 permissions:
@@ -14,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: true
 
 jobs:
@@ -34,7 +32,7 @@ jobs:
       - name: Cai thu vien
         run: npm ci
 
-      - name: Kiem tra loi TypeScript
+      - name: Kiem tra loi
         run: npm run lint
 
       - name: Build website
@@ -42,19 +40,21 @@ jobs:
 
       - name: Cau hinh GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
-      - name: Tai file build len Pages
+      - name: Tai ban build len GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    needs: build
 
     steps:
       - name: Deploy len GitHub Pages
