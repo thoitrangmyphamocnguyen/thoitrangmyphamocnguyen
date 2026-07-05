@@ -829,8 +829,12 @@ export default function App() {
           {/* Brand block */}
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-amber-950">
-              <div className="bg-amber-500 text-amber-950 font-mono font-black w-9 h-9 rounded-xl flex items-center justify-center text-sm shadow-sm">
-                ỐN
+              <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-amber-600 via-amber-500 to-yellow-400 flex items-center justify-center shadow-md overflow-hidden border border-amber-300 shrink-0">
+                <span className="absolute inset-[2px] rounded-full bg-amber-950 flex items-center justify-center border border-amber-400/30">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-300 to-yellow-100 font-serif font-black text-[11px] tracking-wide relative z-10 select-none">
+                    ON
+                  </span>
+                </span>
               </div>
               <h2 className="text-lg font-serif font-extrabold uppercase tracking-widest text-amber-950">ỐC NGUYỄN</h2>
             </div>

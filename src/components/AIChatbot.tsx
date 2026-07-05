@@ -194,8 +194,12 @@ export default function AIChatbot({ lang, onAddToCart, products }: AIChatbotProp
                     className={`flex gap-2.5 ${isUser ? "justify-end" : "justify-start"}`}
                   >
                     {!isUser && (
-                      <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-amber-950 text-xs font-bold shrink-0 self-start shadow-sm">
-                        ỐN
+                      <div className="relative w-8 h-8 rounded-full bg-gradient-to-br from-amber-600 via-amber-500 to-yellow-400 flex items-center justify-center shadow-sm overflow-hidden border border-amber-300 shrink-0 self-start">
+                        <span className="absolute inset-[1.5px] rounded-full bg-amber-950 flex items-center justify-center border border-amber-400/25">
+                          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-300 to-yellow-100 font-serif font-black text-[9px] tracking-wide relative z-10 select-none">
+                            ON
+                          </span>
+                        </span>
                       </div>
                     )}
                     <div
@@ -214,8 +218,12 @@ export default function AIChatbot({ lang, onAddToCart, products }: AIChatbotProp
               {/* Typing indicator */}
               {isTyping && (
                 <div className="flex gap-2.5 justify-start">
-                  <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-amber-950 text-xs font-bold shrink-0 shadow-sm animate-pulse">
-                    ỐN
+                  <div className="relative w-8 h-8 rounded-full bg-gradient-to-br from-amber-600 via-amber-500 to-yellow-400 flex items-center justify-center shadow-sm overflow-hidden border border-amber-300 shrink-0 animate-pulse">
+                    <span className="absolute inset-[1.5px] rounded-full bg-amber-950 flex items-center justify-center border border-amber-400/25">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-300 to-yellow-100 font-serif font-black text-[9px] tracking-wide relative z-10 select-none">
+                        ON
+                      </span>
+                    </span>
                   </div>
                   <div className="bg-white text-zinc-500 rounded-2xl rounded-tl-none p-3.5 border border-amber-100 shadow-sm flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
